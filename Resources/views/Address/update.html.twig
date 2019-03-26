@@ -1,0 +1,3 @@
+{% extends "OroAddressBundle:widget:update.html.twig" %}
+{% set addressUpdateUrl = path('candm_address_update', { id: form.vars.value.id, className: addressesEntity.className, addressesEntityId: addressesEntity.id }) %}
+{% set addressCreateUrl = path('candm_address_create', { className: addressesEntity.className, addressesEntityId: addressesEntity.id }) %}

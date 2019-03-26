@@ -1,0 +1,7 @@
+{% extends "OroAddressBundle:widget:addressBook.html.twig" %}
+{% set addressListUrl = path('candm_api_get_class_entity_addresses', {'className': entity.className, 'addressesEntityId': entity.id}) %}
+{% set addressCreateUrl = path('candm_address_create', {'className': entity.className, 'addressesEntityId': entity.id}) %}
+{% set addressUpdateRoute = 'candm_address_update' %}
+{% set addressDeleteRoute = 'candm_api_delete_class_entity_address' %}
+{% set ownerParam = 'addressesEntityId' %}
+

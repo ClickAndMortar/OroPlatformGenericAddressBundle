@@ -1,0 +1,10 @@
+parameters:
+    candm.type.address.class: ClickAndMortar\GenericAddressBundle\Form\AddressType
+
+services:
+    candm.type.address:
+        class: %candm.type.address.class%
+        arguments:
+        - "@candm_simpleitem.simpleitem.manager"
+        tags:
+        - { name: form.type, alias: candm_address_type }

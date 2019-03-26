@@ -1,0 +1,43 @@
+parameters:
+    # Entities
+    candm.address.entity.class: ClickAndMortar\GenericAddressBundle\Entity\Address
+
+    # Managers
+    candm.addresses_item.manager.class: ClickAndMortar\GenericAddressBundle\Entity\Manager\AddressesItemManager
+
+    # API Managers
+    candm.address.manager.api.class: Oro\Bundle\SoapBundle\Entity\Manager\ApiEntityManager
+
+services:
+    # Form handlers
+    candm.address.form:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+        - "candm_address_form"
+        - "candm_address_type"
+        - ~
+        - { data_class: %candm.address.entity.class% }
+
+    candm.form.handler.address:
+        class: %oro_address.form.handler.address.class%
+        scope: request
+        arguments:
+        - "@candm.address.form"
+        - "@request"
+        - "@doctrine.orm.entity_manager"
+
+    # Managers
+    candm.addresses_item.manager:
+        class: %candm.addresses_item.manager.class%
+        arguments:
+        - '@doctrine.orm.entity_manager'
+
+    # API Managers
+    candm.address.manager.api:
+        class: %candm.address.manager.api.class%
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+        - %candm.address.entity.class%
+        - "@doctrine.orm.entity_manager"

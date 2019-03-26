@@ -1,0 +1,47 @@
+clickandmortar:
+    generic_address:
+        address:
+            entity_label: Adresse
+            entity_plural_label: Adresses
+            id:
+                label: Identifiant
+            label:
+                label: Nom de l'adresse
+            primary:
+                label: Principale
+            type:
+                label: Type
+            last_name:
+                label: Nom
+            first_name:
+                label: Prénom
+            street:
+                label: Rue
+            street2:
+                label: Complément
+            postal_code:
+                label: Code postal
+            phone:
+                label: Téléphone
+            mobile_phone:
+                label: Mobile
+            email:
+                label: E-mail
+            organization:
+                label: Organisation
+            city:
+                label: Ville
+            country:
+                label: Pays
+            middle_name:
+                label: Deuxième prénom
+            name_prefix:
+                label: Préfixe de nom
+            name_suffix:
+                label: Suffixe de nom
+            region:
+                label: Région
+            custom:
+                view:
+                    address_book: Carnet d'adresses
+                    add_address: Ajouter une adresse

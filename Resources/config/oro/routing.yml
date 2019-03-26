@@ -1,0 +1,9 @@
+candm_generic_address.api.address:
+    resource: '@ClickAndMortarGenericAddressBundle/Controller/Api/Rest/AddressController.php'
+    type: rest
+    prefix: api/rest/{version}/
+    requirements:
+        version: latest|v1
+        _format:  json
+    defaults:
+        version: latest
