@@ -1,3 +1,8 @@
+candm_generic_address:
+    resource:     "@ClickAndMortarGenericAddressBundle/Controller"
+    type:         annotation
+    prefix:       /
+
 candm_generic_address.api.address:
     resource: '@ClickAndMortarGenericAddressBundle/Controller/Api/Rest/AddressController.php'
     type: rest

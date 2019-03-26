@@ -10,7 +10,7 @@ use Doctrine\Common\Persistence\ObjectRepository;
  * Addresses item manager
  *
  * @author  Simon CARRE <simon.carre@clickandmortar.fr>
- * @package Aslv\ExtranetBundle\Entity\Manager
+ * @package ClickAndMortar\GenericAddressBundle\Entity\Manager
  */
 class AddressesItemManager
 {
@@ -41,7 +41,6 @@ class AddressesItemManager
      */
     public function find($className, $id)
     {
-        // TODO : update method to get repository here
         $repository = $this->getRepository($className);
         if ($repository !== null) {
             $addressesItem = $repository->find($id);

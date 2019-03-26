@@ -5,6 +5,7 @@ namespace ClickAndMortar\GenericAddressBundle\Migrations\Data\ORM;
 use ClickAndMortar\GenericAddressBundle\Entity\Activity;
 use ClickAndMortar\SimpleItemBundle\Entity\SimpleItem;
 use ClickAndMortar\SimpleItemBundle\Entity\SimpleList;
+use ClickAndMortar\SimpleItemBundle\Migrations\Data\ORM\LoadAbstractSimpleItems;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\Persistence\ObjectRepository;

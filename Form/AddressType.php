@@ -4,6 +4,12 @@ namespace ClickAndMortar\GenericAddressBundle\Form;
 
 use ClickAndMortar\SimpleItemBundle\Entity\Manager\SimpleItemManager;
 use ClickAndMortar\SimpleItemBundle\Entity\SimpleItem;
+use Oro\Bundle\AddressBundle\Form\Type\CountryType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
@@ -54,84 +60,84 @@ class AddressType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('id', 'hidden')
-            ->add('label', 'text',
+            ->add('id', HiddenType::class)
+            ->add('label', TextType::class,
                 array(
                     'required' => true,
-                    'label'    => 'candm.generic_address.address.label.label',
+                    'label'    => 'clickandmortar.generic_address.address.label.label',
                 )
             )
-            ->add('primary', 'checkbox',
+            ->add('primary', CheckboxType::class,
                 array(
                     'required' => false,
-                    'label'    => 'candm.generic_address.address.primary.label',
+                    'label'    => 'clickandmortar.generic_address.address.primary.label',
                 )
             )
-            ->add('type', 'entity',
+            ->add('type', EntityType::class,
                 array(
                     'required' => false,
-                    'label'    => 'candm.generic_address.address.type.label',
+                    'label'    => 'clickandmortar.generic_address.address.type.label',
                     'class'    => SimpleItem::CLASS_NAME,
                     'choices'  => $this->simpleItemManager->getByListValue(self::LIST_VALUE_TYPES),
                 ))
-            ->add('firstName', 'text',
+            ->add('firstName', TextType::class,
                 array(
                     'required' => false,
                     'label'    => 'oro.address.first_name.label',
                 )
             )
-            ->add('lastName', 'text',
+            ->add('lastName', TextType::class,
                 array(
                     'required' => false,
-                    'label'    => 'candm.generic_address.address.last_name.label',
+                    'label'    => 'clickandmortar.generic_address.address.last_name.label',
                 )
             )
-            ->add('street', 'text',
+            ->add('street', TextType::class,
                 array(
                     'required' => false,
-                    'label'    => 'candm.generic_address.address.street.label',
+                    'label'    => 'clickandmortar.generic_address.address.street.label',
                 )
             )
-            ->add('street2', 'text',
+            ->add('street2', TextType::class,
                 array(
                     'required' => false,
-                    'label'    => 'candm.generic_address.address.street2.label',
+                    'label'    => 'clickandmortar.generic_address.address.street2.label',
                 )
             )
-            ->add('postalCode', 'text',
+            ->add('postalCode', TextType::class,
                 array(
                     'required' => false,
-                    'label'    => 'candm.generic_address.address.postal_code.label',
+                    'label'    => 'clickandmortar.generic_address.address.postal_code.label',
                 )
             )
-            ->add('city', 'text',
+            ->add('city', TextType::class,
                 array(
                     'required' => false,
                     'label'    => 'oro.address.city.label',
                 )
             )
-            ->add('country', 'oro_country',
+            ->add('country', CountryType::class,
                 array(
                     'required' => false,
                     'label'    => 'oro.address.country.label',
                 )
             )
-            ->add('phone', 'text',
+            ->add('phone', TextType::class,
                 array(
                     'required' => false,
-                    'label'    => 'candm.generic_address.address.phone.label',
+                    'label'    => 'clickandmortar.generic_address.address.phone.label',
                 )
             )
-            ->add('mobilePhone', 'text',
+            ->add('mobilePhone', TextType::class,
                 array(
                     'required' => false,
-                    'label'    => 'candm.generic_address.address.mobile_phone.label',
+                    'label'    => 'clickandmortar.generic_address.address.mobile_phone.label',
                 )
             )
-            ->add('email', 'email',
+            ->add('email', EmailType::class,
                 array(
                     'required' => false,
-                    'label'    => 'candm.generic_address.address.email.label',
+                    'label'    => 'clickandmortar.generic_address.address.email.label',
                 )
             );
     }

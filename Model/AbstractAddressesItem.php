@@ -165,6 +165,6 @@ abstract class AbstractAddressesItem
      */
     public function getClassName()
     {
-        return (new \ReflectionClass($this))->getShortName();
+        return (new \ReflectionClass($this))->getName();
     }
 }

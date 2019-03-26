@@ -1,6 +1,6 @@
 <?php
 
-namespace ClickAndMortar\GenericAddressBundle\Controller;
+namespace ClickAndMortar\GenericAddressBundle\Entity;
 
 use ClickAndMortar\SimpleItemBundle\Entity\SimpleItem;
 use Doctrine\ORM\Mapping as ORM;
