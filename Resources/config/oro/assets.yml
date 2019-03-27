@@ -1,0 +1,3 @@
+css:
+    inputs:
+        - bundles/clickandmortargenericaddress/css/scss/main.scss
