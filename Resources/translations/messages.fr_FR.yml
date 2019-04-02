@@ -41,6 +41,8 @@ clickandmortar:
                 label: Suffixe de nom
             region:
                 label: Région
+            comment:
+                label: Commentaire
             custom:
                 view:
                     address_book: Carnet d'adresses

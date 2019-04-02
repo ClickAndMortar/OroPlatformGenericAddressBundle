@@ -139,6 +139,12 @@ class AddressType extends AbstractType
                     'required' => false,
                     'label'    => 'clickandmortar.generic_address.address.email.label',
                 )
+            )
+            ->add('comment', TextType::class,
+                array(
+                    'required' => false,
+                    'label'    => 'clickandmortar.generic_address.address.comment.label',
+                )
             );
     }
 

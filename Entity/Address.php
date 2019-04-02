@@ -106,6 +106,20 @@ class Address extends AbstractAddress
     protected $email;
 
     /**
+     * @ORM\Column(name="comment", type="text", nullable=true)
+     * * @ConfigField(
+     *      defaultValues={
+     *          "importexport"={
+     *              "order"=200
+     *          }
+     *      }
+     * )
+     *
+     * @var string
+     */
+    protected $comment;
+
+    /**
      * Used to store usefull data
      *
      * @ORM\Column(name="serialized_data", type="text", nullable=true)
@@ -245,6 +259,26 @@ class Address extends AbstractAddress
     public function setEmail($email)
     {
         $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getComment()
+    {
+        return $this->comment;
+    }
+
+    /**
+     * @param string $comment
+     *
+     * @return Address
+     */
+    public function setComment($comment)
+    {
+        $this->comment = $comment;
 
         return $this;
     }
