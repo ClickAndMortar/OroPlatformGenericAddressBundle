@@ -159,6 +159,24 @@ abstract class AbstractAddressesItem
     }
 
     /**
+     * Get unique address by $type
+     *
+     * @param string $type
+     *
+     * @return Address
+     */
+    public function getUniqueAddressByType($type)
+    {
+        foreach ($this->getAddresses() as $address) {
+            if ($address->getType() !== null && $address->getType()->getValue() === $type) {
+                return $address;
+            }
+        }
+
+        return null;
+    }
+
+    /**
      * Get current class name
      *
      * @return string
