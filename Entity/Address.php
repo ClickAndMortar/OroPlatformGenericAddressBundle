@@ -64,11 +64,26 @@ class Address extends AbstractAddress
     protected $type;
 
     /**
+     * @ORM\ManyToOne(targetEntity="ClickAndMortar\SimpleItemBundle\Entity\SimpleItem")
+     * @ORM\JoinColumn(name="title_id", referencedColumnName="id", onDelete="SET NULL")
+     * @ConfigField(
+     *      defaultValues={
+     *          "importexport"={
+     *              "order"=165
+     *          }
+     *      }
+     * )
+     *
+     * @var SimpleItem
+     */
+    protected $title;
+
+    /**
      * @ORM\Column(name="phone", type="string", nullable=true)
      * * @ConfigField(
      *      defaultValues={
      *          "importexport"={
-     *              "order"=160
+     *              "order"=170
      *          }
      *      }
      * )
@@ -187,6 +202,26 @@ class Address extends AbstractAddress
     public function setType($type)
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * @return SimpleItem
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param SimpleItem $title
+     *
+     * @return Address
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
 
         return $this;
     }

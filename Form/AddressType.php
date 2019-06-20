@@ -40,6 +40,13 @@ class AddressType extends AbstractType
     const LIST_VALUE_TYPES = 'addressTypes';
 
     /**
+     * Titles list
+     *
+     * @var string
+     */
+    const LIST_VALUE_TITLES = 'addressTitles';
+
+    /**
      * @var SimpleItemManager
      */
     protected $simpleItemManager;
@@ -79,6 +86,13 @@ class AddressType extends AbstractType
                     'label'    => 'clickandmortar.generic_address.address.type.label',
                     'class'    => SimpleItem::CLASS_NAME,
                     'choices'  => $this->simpleItemManager->getByListValue(self::LIST_VALUE_TYPES),
+                ))
+            ->add('title', EntityType::class,
+                array(
+                    'required' => false,
+                    'label'    => 'clickandmortar.generic_address.address.title.label',
+                    'class'    => SimpleItem::CLASS_NAME,
+                    'choices'  => $this->simpleItemManager->getByListValue(self::LIST_VALUE_TITLES),
                 ))
             ->add('firstName', TextType::class,
                 array(

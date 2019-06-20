@@ -40,6 +40,20 @@ class LoadAddressSimpleLists extends LoadAbstractSimpleItems
                     ),
                 ),
             ),
+            array(
+                'label' => 'Civilité',
+                'value' => 'addressTitles',
+                'items' => array(
+                    array(
+                        'label' => 'M.',
+                        'value' => 'm',
+                    ),
+                    array(
+                        'label' => 'Mme',
+                        'value' => 'mme',
+                    ),
+                ),
+            ),
         );
     }
 }

@@ -11,6 +11,8 @@ clickandmortar:
                 label: Principale
             type:
                 label: Type
+            title:
+                label: Civilité
             last_name:
                 label: Nom
             first_name:

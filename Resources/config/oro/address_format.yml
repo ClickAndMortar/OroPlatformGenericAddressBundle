@@ -1,3 +1,3 @@
 FR:
-    format: '%organization%\n%name%\n%street%\n%postal_code% %CITY%\n%COUNTRY%\n%phone%\n%mobile_phone%\n%email%\n%comment%'
-    require: [street, city, postal_code]
+    format: '%organization%\n%title% %name%\n%street%\n%postal_code% %CITY%\n%COUNTRY%\n%phone%\n%mobile_phone%\n%email%\n%comment%'
+    require: [title, street, city, postal_code]
