@@ -4,19 +4,19 @@ Generic Address bundle is a bundle for OroPlatform / OroCRM project. It allows t
 
 Made with :blue_heart: by C&M
 
-## Requirements
+## Versions
 
-|                                     | Version |
-| ----------------------------------- | ------- |
-| PHP                                 | `>=7.1` |
-| OroPlatform / OroCrm                | `>=3.1` |
+| Bundle version                      | OroPlaftorm version |
+| ----------------------------------- | ------------------- |
+| 1.1.*                               | 4.1.*               |
+| 1.0.*                               | 3.1.*               |
 
 ## Installation
 
 ### Download the Bundle
 
 ```console
-$ composer require clickandmortar/oro-platform-generic-address-bundle
+$ composer require "clickandmortar/oro-platform-generic-address-bundle" "1.1.*"
 ```
 
 ### Enable the Bundle
