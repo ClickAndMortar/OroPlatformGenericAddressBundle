@@ -10,7 +10,6 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use FOS\RestBundle\Controller\Annotations\NamePrefix;
 use FOS\RestBundle\Controller\Annotations\RouteResource;
 use FOS\RestBundle\Routing\ClassResourceInterface;
-use FOS\RestBundle\Util\Codes;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Oro\Bundle\SoapBundle\Controller\Api\Rest\RestController;
 
@@ -52,7 +51,7 @@ class AddressController extends RestController implements ClassResourceInterface
         }
         $responseData = $addressData ? json_encode($addressData) : '';
 
-        return new Response($responseData, $address ? Codes::HTTP_OK : Codes::HTTP_NOT_FOUND);
+        return new Response($responseData, $address ? Response::HTTP_OK : Response::HTTP_NOT_FOUND);
     }
 
     /**
@@ -83,7 +82,7 @@ class AddressController extends RestController implements ClassResourceInterface
 
         return new JsonResponse(
             $result,
-            empty($addressesEntity) ? Codes::HTTP_NOT_FOUND : Codes::HTTP_OK
+            empty($addressesEntity) ? Response::HTTP_NOT_FOUND : Response::HTTP_OK
         );
     }
 
@@ -111,7 +110,7 @@ class AddressController extends RestController implements ClassResourceInterface
 
             return $this->handleDeleteRequest($addressId);
         } else {
-            return $this->handleView($this->view(null, Codes::HTTP_NOT_FOUND));
+            return $this->handleView($this->view(null, Response::HTTP_NOT_FOUND));
         }
     }
 
@@ -139,7 +138,7 @@ class AddressController extends RestController implements ClassResourceInterface
         }
         $responseData = $address ? json_encode($this->getPreparedItem($address)) : '';
 
-        return new Response($responseData, $address ? Codes::HTTP_OK : Codes::HTTP_NOT_FOUND);
+        return new Response($responseData, $address ? Response::HTTP_OK : Response::HTTP_NOT_FOUND);
     }
 
     /**

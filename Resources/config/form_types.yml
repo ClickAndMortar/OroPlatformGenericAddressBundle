@@ -3,8 +3,8 @@ parameters:
 
 services:
     candm.type.address:
-        class: %candm.type.address.class%
+        class: '%candm.type.address.class%'
         arguments:
-        - "@candm_simpleitem.simpleitem.manager"
+            - '@candm_simpleitem.simpleitem.manager'
         tags:
-        - { name: form.type, alias: candm_address_type }
+            - { name: form.type, alias: candm_address_type }

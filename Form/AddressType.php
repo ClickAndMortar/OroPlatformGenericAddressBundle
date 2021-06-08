@@ -67,7 +67,11 @@ class AddressType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('id', HiddenType::class)
+            ->add('id', HiddenType::class,
+                array(
+                    'mapped' => false,
+                )
+            )
             ->add('label', TextType::class,
                 array(
                     'required' => true,
