@@ -1,0 +1,5 @@
+api:
+    entities:
+        ClickAndMortar\GenericAddressBundle\Entity\Address:
+            actions:
+                update_list: true
