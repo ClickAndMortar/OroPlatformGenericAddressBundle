@@ -10,8 +10,8 @@
         }
     ],
     "require": {
-        "oro/platform": "4.1.*",
-        "clickandmortar/oro-platform-simple-item-bundle": "^1.1"
+        "oro/platform": "4.2.*",
+        "clickandmortar/oro-platform-simple-item-bundle": "4.2.*"
     },
     "autoload": {
         "psr-4": {
