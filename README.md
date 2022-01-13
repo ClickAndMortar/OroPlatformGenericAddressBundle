@@ -6,10 +6,11 @@ Made with :blue_heart: by C&M
 
 ## Versions
 
-| Bundle version                      | OroPlaftorm version |
-| ----------------------------------- | ------------------- |
-| 1.1.*                               | 4.1.*               |
-| 1.0.*                               | 3.1.*               |
+| Bundle version | OroPlaftorm version |
+|----------------|---------------------|
+| 4.2.*          | 4.2.*               |
+| 1.1.*          | 4.1.*               |
+| 1.0.*          | 3.1.*               |
 
 ## Installation
 
