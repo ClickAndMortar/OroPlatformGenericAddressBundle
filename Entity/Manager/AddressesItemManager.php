@@ -3,8 +3,8 @@
 namespace ClickAndMortar\GenericAddressBundle\Entity\Manager;
 
 use ClickAndMortar\GenericAddressBundle\Model\AbstractAddressesItem;
-use Doctrine\Common\Persistence\ObjectManager;
-use Doctrine\Common\Persistence\ObjectRepository;
+use Doctrine\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectRepository;
 
 /**
  * Addresses item manager

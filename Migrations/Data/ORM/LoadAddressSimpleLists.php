@@ -7,8 +7,8 @@ use ClickAndMortar\SimpleItemBundle\Entity\SimpleItem;
 use ClickAndMortar\SimpleItemBundle\Entity\SimpleList;
 use ClickAndMortar\SimpleItemBundle\Migrations\Data\ORM\LoadAbstractSimpleItems;
 use Doctrine\Common\DataFixtures\FixtureInterface;
-use Doctrine\Common\Persistence\ObjectManager;
-use Doctrine\Common\Persistence\ObjectRepository;
+use Doctrine\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectRepository;
 
 /**
  * Class LoadAddressSimpleLists
